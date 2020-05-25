@@ -1,0 +1,64 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>什么是Java</title>
+		<style type="text/css">
+			p .tooltip {
+				color: green;
+				position: relative;
+			
+			}
+
+			p .tooltip::after {
+				content: attr(title);
+				word-break: keep-all;
+				position: absolute;
+				padding: 4px 16px;
+				color: #fff;
+				background: #000;
+				left: calc(100% + 60px);
+				top: -3px;
+				border: 1px solid black;
+				/* 设置透明度 */
+				opacity: 0;
+				/* 设置过渡效果 */
+				transition: all 1s;
+			}
+			/* 设置鼠标悬停的样式 */
+			/* 在哪个元素上设置hover */
+			p .tooltip:hover::after {
+				/* 设置透明度 */
+				opacity: 1;
+				left: calc(100% + 8px);
+			}
+
+			p .tooltip::before {
+				content: "";
+				width: 0;
+				height: 0;
+				border: 10px solid transparent;
+				border-right-color: black;
+				position: absolute;
+				z-index: 2;
+				left: calc(100% + 40px);
+				top: 2px;
+				/* 设置透明度 */
+				opacity: 0;
+				/* 设置过渡效果 */
+				transition: all 1s;
+			}
+			p .tooltip:hover::before {
+				/* 设置透明度 */
+				opacity: 1;
+				left: calc(100% - 11px);
+			}
+		</style>
+	</head>
+
+	<body>
+		<p>Java是一门面向<span title="重要" class="tooltip">对象</span>的编程语言，不仅吸收了<span title="也不错" class="tooltip">C/C++</span>语言的各种优点，还摒弃了C/C++里难以理解的多继承、指针等概念，因此Java语言具有功能强大和简单易用两个特征。Java语言作为静态面向对象编程语言的代表，极好地实现了面向对象理论，允许程序员以优雅的思维方式进行复杂的编程
+			。</p>
+	</body>
+</html>
