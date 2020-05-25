@@ -1,9 +1,64 @@
-<!DOCTYPE html>
-<html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<meta charset="utf-8">
-		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无</title>
+		<style type="text/css">
+			p .tooltip {
+				color: green;
+				position: relative;
+			
+			}
+
+			p .tooltip::after {
+				content: attr(title);
+				word-break: keep-all;
+				position: absolute;
+				padding: 4px 16px;
+				color: #fff;
+				background: #000;
+				left: calc(100% + 60px);
+				top: -3px;
+				border: 1px solid black;
+				/* 设置透明度 */
+				opacity: 0;
+				/* 设置过渡效果 */
+				transition: all 1s;
+			}
+			/* 设置鼠标悬停的样式 */
+			/* 在哪个元素上设置hover */
+			p .tooltip:hover::after {
+				/* 设置透明度 */
+				opacity: 1;
+				left: calc(100% + 8px);
+			}
+
+			p .tooltip::before {
+				content: "";
+				width: 0;
+				height: 0;
+				border: 10px solid transparent;
+				border-right-color: black;
+				position: absolute;
+				z-index: 2;
+				left: calc(100% + 40px);
+				top: 2px;
+				/* 设置透明度 */
+				opacity: 0;
+				/* 设置过渡效果 */
+				transition: all 1s;
+			}
+			p .tooltip:hover::before {
+				/* 设置透明度 */
+				opacity: 1;
+				left: calc(100% - 11px);
+			}
+		</style>
 	</head>
+
 	<body>
+		<p>Java是一种使用非常广泛的计算机编程语言 <span title="第一" class="tooltip">C++是一种静态数据类型检查的，支持多重编程范式的通用程序设计语言。</span>它支持过程化程序设计、数据抽象、面向对象程序设计、<span title="第三" class="tooltip">C/C++</span>制作图标等等泛型程序设计等多种程序设计风格。
+			。</p>
 	</body>
 </html>
